@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" href="/public/favicon.png" type="image/png" /> 
-    <title>Canvas Example (NodeJS)</title>
+<head>
   <meta id="sf-canvas-signed-request" content="<%= verifiedSignedRequestJSON %>" />
   <script src="https://login.salesforce.com/canvas/sdk/js/31.0/canvas-all.js"></script>
   <script src="/js/jsforce.js"></script>
@@ -18,17 +16,5 @@ conn.query('SELECT Id, Name FROM Account', function(err, res) {
 
   </script>
 </head>
-
-
-  <body>
-    <h1>Canvas App NodeJS Example</h1>
-    <hr/>
-    <% if(typeof canvasDetails !== 'undefined' && typeof canvasDetails.context !== 'undefined'){ %>
-      <h3>You are logged into a Force.com Canvas app!</h3>
-      <p>These are the details provided by Salesforce POST request</p>
-      <p style="overflow:auto; height: 400px;"><%=JSON.stringify(canvasDetails,undefined,2)%></p>
-    <% }else{ %>
-      <h3>You are not logged inside a Force.com Canvas</h3>
-    <% }%>
-  </body>
+<body></body>
 </html>
