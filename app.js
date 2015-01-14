@@ -1,7 +1,5 @@
 var express = require('express');
 var sftools = require('./sf-tools');
-var jsforce = require('jsforce');
-var conn = new jsforce.Connection();
 var app = express();
 var PORT = process.env.PORT || 5000;
 
