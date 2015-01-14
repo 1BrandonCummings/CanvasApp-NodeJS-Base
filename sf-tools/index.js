@@ -1,5 +1,5 @@
 var crypto = require('crypto');
-
+ 
 
 exports.saveCanvasDetailsInSession = function(req, canvasRequest){
 	if(!req.session.canvas) req.session.canvas = {};
