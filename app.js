@@ -1,15 +1,17 @@
 var express = require('express');
 var sftools = require('./sf-tools');
 var app = express();
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 8643; 
 
 //SF app secret
 var SF_CANVASAPP_CLIENT_SECRET = process.env.SF_CANVASAPP_CLIENT_SECRET;
 
 app.configure(function() {
     app.use('/public',express.static(__dirname + '/public'));
+    
     app.engine('html', require('ejs').renderFile);
     app.set('views', __dirname + '/views');
+
     app.set('view engine', 'html');
     app.use(express.cookieParser());
 
@@ -22,6 +24,7 @@ app.configure(function() {
     app.use(express.logger());
     
 });
+// Set the height and width explicitly.
 
 app.get('/',function(req,res){
     //get the canvas details from session (if any)

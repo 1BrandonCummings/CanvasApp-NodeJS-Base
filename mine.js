@@ -1,3 +1,3 @@
-exports.hundredTimes = function(number) {
-	return number * 100;
+exports.hundredTimes = function(req) {
+	return '100';
 }
