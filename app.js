@@ -1,5 +1,7 @@
 var express = require('express');
 var sftools = require('./sf-tools');
+var jsforce = require('jsforce');
+var conn = new jsforce.Connection();
 var app = express();
 var PORT = process.env.PORT || 5000;
 
@@ -46,3 +48,5 @@ app.post('/canvas/callback', function(req,res){
 exports.server = app.listen(PORT, function() {
     console.log("Listening on " + PORT);
 });
+
+// <p style="overflow:auto; height: 400px;"><%=JSON.stringify(canvasDetails,undefined,2)%></p>
