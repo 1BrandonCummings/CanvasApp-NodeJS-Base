@@ -7,8 +7,8 @@ exports.saveCanvasDetailsInSession = function(req, canvasRequest){
 }
 
 exports.getCanvasDetails = function(req){
-	if(!req.session.canvas.context.user.email) req.session.canvas.context.user.email = {};
-	return req.session.canvas.context.user.email;
+	if(!req.session.canvas) req.session.canvas = {};
+	return "hello";
 }
 
 /* 
