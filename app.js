@@ -1,7 +1,10 @@
+var fs = require('fs');
 var express = require('express');
 var sftools = require('./sf-tools');
+var http = require('http');
+
 var app = express();
-var PORT = process.env.PORT || 8643; 
+var PORT = process.env.PORT || 8064; 
 
 //SF app secret
 var SF_CANVASAPP_CLIENT_SECRET = process.env.SF_CANVASAPP_CLIENT_SECRET;
@@ -23,7 +26,9 @@ app.configure(function() {
     app.use(express.bodyParser());
     app.use(express.logger());
     
-});
+}); 
+
+
 // Set the height and width explicitly.
 
 app.get('/',function(req,res){
@@ -45,6 +50,9 @@ app.post('/canvas/callback', function(req,res){
         return res.redirect('/');
     });
 });
+// var server = http.createServer({}, app).listen(8064, function(){
+//     console.log("server started at port 3000");
+// });
 
 exports.server = app.listen(PORT, function() {
     console.log("Listening on " + PORT);

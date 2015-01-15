@@ -9,11 +9,8 @@
     <% if(typeof canvasDetails !== 'undefined' && typeof canvasDetails.context !== 'undefined'){ %>
       <h3>You are logged into a Force.com Canvas app!</h3>
       <p>These are the details provided by Salesforce POST request</p>
-      <pre>
-
-      <%=JSON.stringify(canvasDetails,undefined,2)%>
-
-      </pre>
+      <iframe style="overflow:auto; height: 1000px; width:1400px;" src="https://zero.voxa.com/dashboard"></iframe>
+      <pre style="overflow:auto; height: 1000px;"><%=JSON.stringify(canvasDetails,undefined,2)%></pre>
     <% }else{ %>
       <h3>You are not logged inside a Force.com Canvas</h3>
     <% }%>
