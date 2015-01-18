@@ -85,7 +85,7 @@ app.get('/',function(req,res){
         headers:{"Content-Type": "application/json"} 
     };
 
-client.post("https://ferzapgrvf.localtunnel.me/api/emails", args, function(data, response){
+client.post("https://blooming-basin-7511.herokuapp.com/api/emails", args, function(data, response){
             // parsed response body as js object
             console.log(data);
             // raw response
