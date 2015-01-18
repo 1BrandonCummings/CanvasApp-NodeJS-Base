@@ -1,12 +1,25 @@
 {
-    "name": "utility-app",
+    "name": "voxa-iframe-app",
+    "main": "app.js",
+    "author": "Cummings",
     "version": "0.0.1",
     "dependencies": {
-        "express": "3.3.x",
-        "ejs": "*"
+
+        "ejs": "*",
+        "express"    : "~4.7.2",
+        "mongoose"   : "~3.6.2",
+        "morgan"     : "~1.2.2",
+        "body-parser": "~1.5.2",
+        "method-override": "~2.1.2",
+        "cookie-parser": "~1.3.3",
+        "express-session": "~1.10.1"
+
+    
     },
     "engines": {
         "node": "0.10.x",
         "npm": "1.2.x"
     }
 }
+
+
